@@ -1,0 +1,109 @@
+//    clients start
+ 
+$gb-line: $light-gray3;
+$bg-arrow: $xanadu-light;
+$shadow-arrow: $xanadu-dark;
+$hover-bg-arrow: $vermilion;
+$hover-shadow-arrow: $persian_red;
+$color-text-clients: $xanadu-dark;
+
+.clients {
+    position: relative;
+    
+    .top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 0 0;
+        margin: 0 0 51px;
+        
+        @media screen and (max-width: $break_lg){
+            justify-content: center;
+        }
+        
+        h3 {
+            color: $color-text-clients;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+        }
+        
+        .line {
+            position: relative;
+            width: 880px;
+            height: 1px;
+            background-color: $gb-line;
+            margin: 0 auto 0 25px;
+            
+            @media screen and (max-width: $break_lg){
+                display: none;
+            }
+            
+            &:before {
+                content: "\2022";
+                font-size: 30px;
+                font-weight: 700;
+                color: $gb-line;
+                position: absolute;
+                top: -12px;
+                left: -10px;
+            }
+        }
+    }
+    
+    .carousel-clients {
+        margin: 0 0 50px;
+        
+        div {
+            img {
+                margin: 0 auto;
+                border-radius: 4px;
+            }
+        }
+        
+        .slick-arrow {
+            position: absolute;
+            top: -80px;
+            cursor: pointer;
+            font-size: 20px;
+            color: $white;
+            background-color: $bg-arrow;
+            box-shadow: 0 3px 0 $shadow-arrow;
+            border-radius: 4px;
+            transition: $transition-base;
+            
+            &:hover {
+                background-color: $hover-bg-arrow;
+                box-shadow: 0 3px 0 $hover-shadow-arrow;
+            }
+        }
+        
+        .fa-chevron-left {
+            left: 91.4%;
+            padding: 9px 15px 7px 10px;
+            
+            @media screen and (max-width: $break_lg){
+                left: 10px;   
+            }
+            
+            @media screen and (max-width: $break_xs){
+                padding: 9px 10px 7px 8px;
+            }
+        }
+        
+        .fa-chevron-right {
+            right: 3px;
+            padding: 9px 10px 7px 15px;
+            
+            @media screen and (max-width: $break_lg){
+                right: 10px;
+            }
+            
+            @media screen and (max-width: $break_xs){
+                padding: 9px 8px 7px 10px;
+            }
+        }
+    }
+}
+
+//    clients end

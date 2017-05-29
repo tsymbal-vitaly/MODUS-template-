@@ -1,0 +1,146 @@
+//    vision start
+
+.vision {
+    
+    @media screen and (max-width: $break_sm){
+        padding: 78px 0 0;
+    }
+    
+    .slide-item {
+        position: relative;
+        width: 100%;
+        
+        img {
+            width: 100%;
+            height: auto;
+            
+            @media screen and (max-width: $break_sm){
+                height: 200px;
+            }
+        }
+    }
+    .caption {
+        width: 470px;
+        text-align: center;
+        position: absolute;
+        top: 45.5%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        
+        @media screen and (max-width: $break_xs){
+            position: static;
+            transform: none;
+            width: 100%;
+        }
+        
+        .title {
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 10px;
+            
+            @media screen and (max-width: $break_xs){
+                display: block!important;
+                margin-bottom: 0;
+            }
+            
+            h1 {
+                font-size: 50px;
+                font-weight: $font-weight-extrabold;
+                line-height: 45px;
+                letter-spacing: 0.5px;
+                color: $white;
+                border-radius: 4px;
+                background-color: rgba($persian_red, 0.9);
+                text-transform: uppercase;
+                padding: 0 3px 4px 8px;
+                
+                @media screen and (max-width: $break_xs){
+                    font-size: 35px;
+                    border-radius: 0;
+                }
+            }
+        }
+        
+        .description {
+            display: inline-block;
+            text-align: center;
+            
+            p {
+                font-size: 16px;
+                font-weight: $font-weight-normal;
+                line-height: 26px;
+                color: $white;
+                background-color: rgba($arsenic, 0.9);
+                border-radius: 4px;
+                padding: 5px 35px 15px;
+                
+                @media screen and (max-width: $break_xs){
+                    font-size: 14px;
+                    padding: 5px 15px;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    
+    .carousel {
+        position: relative;
+        
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            font-size: 42px;
+            color: $white;
+            background-color: rgba($vermilion, 0.8);
+            box-shadow: 0 3px 0 rgba($persian_red, 0.8);
+            transition: $transition-base;
+            z-index: 20;
+            
+            @media screen and (max-width: $break_xs){
+                font-size: 30px;
+            }
+            
+            &:hover {
+                background-color: rgba($vermilion, 1);
+                box-shadow: 0 3px 0 rgba($persian_red, 1);
+            }
+        }
+        
+        .fa-angle-double-left {
+            left: 0;
+            border-radius: 0 4px 4px 0;
+            padding: 7px 15px 7px 10px;
+        }
+        .fa-angle-double-right {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+            padding: 7px 10px 7px 15px;
+        }
+        
+        .slick-dots {
+            bottom: -30px;
+
+            li {
+                height: 5px;
+                width: 60px;
+                cursor: pointer;
+
+                button {
+                    height: 5px;
+                    width: 60px;
+                    cursor: pointer;
+                    padding: 0;
+                    background-color: $xanadu;
+
+                    &:before {content: none;}
+                }
+            }
+
+            .slick-active button {background-color: $persian_red;}
+        }
+    }
+}
+
+//    vision end

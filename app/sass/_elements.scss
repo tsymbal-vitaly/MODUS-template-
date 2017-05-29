@@ -1,0 +1,172 @@
+//    elements start
+
+$bg-elements: $turquoise;
+
+.elements {
+    background-color: $bg-elements;
+    position: relative;
+    padding: 29px 0 10px;
+    
+    &::before {
+        background-image: url('../img/after-bg-elements.png');
+        background-repeat: repeat-x;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 19px;
+    }
+    
+    .row {
+        @include row-flex();
+            
+        .contacts {
+            @include col-4();
+            margin: 15px;
+            
+            @media screen and (max-width: $break_md){
+                @include col-6();
+                order: 1;
+            }
+            
+            @media screen and (max-width: $break_xs){
+                @include col-12();
+            }
+            
+            .logo {
+                margin: 0 0 0 3px;
+            }
+            
+            p {
+                color: $white;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: -0.1px;
+                margin: 16px 0 16px 3px;
+            }
+            
+            abbr {
+                color: $white;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 23px;
+                text-decoration: none;
+                margin: 0 20px 0 3px;
+            }
+            
+            a {
+                color: $white;
+                font-size: 20px;
+                font-weight: 600;
+                font-style: italic;
+                line-height: 36px;
+                text-decoration: none;
+            }
+        }
+
+        .company,
+        .community {
+            @include col-2();
+            margin: 15px;
+            
+            @media screen and (max-width: $break_md){
+                @include col-6();
+                order: 3;
+            }
+            
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                color: #3b6360;
+                margin: 3px 0 22px;
+            }
+            
+            ul {
+                padding: 0 0 0 24px;
+                
+                li {
+                    
+                    a {
+                        color: $white;
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        text-decoration: none;
+                        transition: $transition-base;
+                        
+                        display: flex;
+                        align-items: center;
+                        
+                        &:hover {
+                            color: $persian_red;
+                        }
+                    }
+                    
+                    .fa {
+                        font-size: 8px;
+                        margin: 0 8px 0 0;
+                        
+                    }
+                }
+            }
+        }
+
+        .blog {
+            @include col-4();
+            margin: 15px;
+            
+            @media screen and (max-width: $break_md){
+                @include col-6();
+                order: 2;
+            }
+            
+            @media screen and (max-width: $break_xs){
+                @include col-12();
+            }
+            
+            h3 {
+                color: $white;
+                font-size: 20px;
+                line-height: 24px;
+                font-style: italic;
+                margin: 2px 0 25px 0;
+                
+                span { 
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-style: normal;
+                }
+            }
+            
+            .blog-item {
+                display: flex;
+                margin: 0 0 20px 0;
+                
+                img {
+                    margin: 0 16px 0 0;
+                }
+                
+                p {
+                    color: $white;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 17px;
+                }
+                
+                .date {
+                    opacity: 0.5;
+                    color: black;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+//    elements end

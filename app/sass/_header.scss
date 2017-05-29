@@ -1,0 +1,274 @@
+//    header start
+
+#header {
+    background-color: $turquoise;
+    padding: 26px 0 24px;
+    position: relative;
+    
+    @media screen and (max-width: $break_sm){
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    &::after {
+        background-image: url('../img/after-bg-navbar.png');
+        background-repeat: repeat-x;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 9px;
+    }
+    
+    .navbar {
+        @include row-flex();
+        @include justify-content(space-between);
+        @include align-items(center);
+        
+        @media screen and (max-width: $break_lg){
+            @include flex-direction(column);
+        }
+        
+        @media screen and (max-width: $break_sm){
+            @include flex-direction(row);
+        }
+    }
+    
+    .logo {
+        display: block;
+        margin: 2px 0 0 22px;
+        
+        @media screen and (max-width: $break_lg){
+            margin: 0 0 20px 0;
+        }
+        
+        @media screen and (max-width: $break_sm){
+            margin: 0 0 0 10px;
+        }
+    }
+    
+    .navbar {
+        @media screen and (max-width: $break_sm){
+            @include flex-direction(column);
+            @include align-items(flex-start);
+        }
+    }
+    
+    #menu {
+        @media screen and (max-width: $break_sm){
+            width: 100%;
+        }
+        
+        ul {
+            @include row-flex();
+            margin: 0 18px 0 0;
+            
+            @media screen and (max-width: $break_lg){
+                margin: 0;
+            }
+            
+            @media screen and (max-width: $break_sm){
+                display: none;
+                padding: 20px 0 5px;
+            }
+            
+            li + li {
+                margin-left: 21px;
+            
+                @media screen and (max-width: $break_sm){
+                    margin: 0;
+                }
+            }
+
+            li {
+                position: relative;
+                
+                @media screen and (max-width: $break_sm){
+                    text-align: center;
+                    margin: 5px 0;
+                }
+                
+                &:hover > a {
+                    background-color: $vermilion;
+                    box-shadow: 0 3px 0 $persian_red;
+                    
+                    @media screen and (max-width: $break_sm){
+                        box-shadow: none;
+                    }
+                }
+
+                a {
+                    display: block;
+                    color: $white;
+                    font-size: 13px;
+                    font-weight: $font-weight-semibold;
+                    line-height: 17px;
+                    letter-spacing: 0.4px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    padding: 6px 14px 7px 13px;
+                    transition: $transition-base;
+                    
+                    @media screen and (max-width: $break_sm){
+                        padding: 10px;
+                    }
+                    
+                    &:hover{
+                        background-color: $verdigris;
+                        box-shadow: 0 3px 0 $pine_green;
+                        
+                        @media screen and (max-width: $break_sm){
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            
+            .is-active {
+                background-color: $verdigris;
+                box-shadow: 0 3px 0 $pine_green;
+                
+                @media screen and (max-width: $break_sm){
+                    box-shadow: none;
+                }
+            }
+            
+            ul {
+                display: none;
+                width: 200px;
+                position: absolute;
+                left: 0;
+                z-index: 20;
+                border-top: 13px solid transparent;
+                
+                @media screen and (max-width: $break_sm){
+                    position: static;
+                    width: 100%;
+                    padding: 0 0 5px;
+                    border-top: 5px solid transparent;
+                }
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 28px;
+                    top: -13px;
+                    margin-left: -17px;
+                    border: 7px solid transparent;
+                    border-bottom: 7px solid #e2534b;
+                    
+                    @media screen and (max-width: $break_sm){
+                        content: none;
+                    }
+                }
+                
+                li {
+                    margin: 0;
+                    padding: 2.5px 5px;
+                    text-align: center;
+                    background-color: $persian_red;
+                    
+                    &:first-child {
+                        padding-top: 5px;
+                        border-radius: 4px 4px 0 0;
+                    }
+                    &:last-child {
+                        padding-bottom: 5px;
+                        border-radius: 0 0 4px 4px;
+                    }
+                }
+                
+                a {
+                    display: block;
+                    color: $white;
+                    background-color: $vermilion;
+                    font-size: 13px;
+                    font-weight: $font-weight-semibold;
+                    line-height: 20px;
+                    letter-spacing: 0.1px;
+                    text-transform: none;
+                    box-shadow: none!important;
+                    padding: 5px;
+                    
+                    &:hover{
+                        background-color: $turquoise;
+                    }
+                    
+                    .fa {
+                        &.fa-angle-right{
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    button {
+        display: none; //display: block;
+        margin: 0 16px;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        
+        @media screen and (max-width: $break_sm) {
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 8px;
+            margin: 0;
+        }
+        
+        span {display: block;}
+    }
+    
+    .grid-button {
+        padding: $base*2;
+        cursor: pointer;
+        user-select: none;
+        
+        .grid {
+            width: $base/1.5;
+            height: $base/1.5;
+            background: $color;
+            color: $color;
+            transition: $transition-button;
+        }
+    }
+    .grid-button.close {
+        .grid {
+            -webkit-transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+            transform: rotate3d(0, 0, 1, -45deg) scale3d(.8, .8, .8);
+        }
+    }
+    
+    .grid-button.rearrange {
+        .grid {
+            box-shadow: -($base+$space) 0 -($base+$space), 0 0 -($base+$space), ($base+$space) (-($base + $space)), -($base+$space) 0, $base+$space 0, -($base+$space) ($base + $space), 0 ($base+$space), ($base+$space) ($base + $space);
+        }
+    }
+    
+    .grid-button.rearrange.close {
+        .grid {
+            box-shadow: 0 0 -$base, 0 0 -$base*2, $base 0, -$base*2 0, $base*2 0, -$base 0, 0 $base*2, 0 $base;
+        }
+    }
+    
+    .grid-button.collapse {
+        .grid {
+            box-shadow: -($base+$space) 0, -($base+$space) ($base+$space), $base+$space 0, ($base+$space) (-($base+$space)), 0 0 -($base+$space), -($base+$space) 0 -($base+$space), 0 ($base+$space), ($base+$space) ($base+$space);
+        }
+    }
+    
+    .grid-button.collapse.close {
+        .grid {
+            box-shadow: -$base 0, 0 0 transparent, $base 0, 0 0 transparent, 0 0 -$base, 0 0 transparent, 0 $base, 0 0 transparent;
+        }
+    }
+}
+
+//    header end

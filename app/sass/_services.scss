@@ -1,0 +1,190 @@
+//    services start
+
+.services {
+    
+    .row {
+        @include row-flex();
+        @include justify-content(center);
+        padding: 22px 0 63px 0;
+        
+        .block-top {
+            @include col-12();
+            display: flex;
+            @include align-items(center);
+            @include justify-content(space-between);
+            background-color: $light-gray2;
+            border-radius: 4px;
+            padding: 19px 36px 22px 25px;
+            margin-bottom: 35px;
+            box-sizing: border-box;
+            
+            @media screen and (max-width: $break_lg){
+                @include flex-direction(column);
+            }
+            
+            @media screen and (max-width:$break_xs){
+               padding: 19px 10px 22px 10px;
+            }
+            
+            .top-info {
+                @include col-9();
+                
+                @media screen and (max-width: $break_lg){
+                    @include col-12();
+                }
+                
+                @media screen and (max-width: $break_xs){
+                    text-align: center;
+                }
+                
+                h2 {
+                    color: $xanadu;
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    
+                    @media screen and (max-width: $break_xs){
+                        margin: 0 0 10px;
+                    }
+                }
+                
+                p {
+                    color: $gray;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: -0.4px;
+                    
+                    @media screen and (max-width: $break_xs){
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+            
+            .button {
+                
+                @media screen and (max-width: $break_lg){
+                    @include col-12();
+                }
+                
+                @media screen and (max-width: $break_xs){
+                    text-align: center;
+                }
+                
+                a {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 0;
+                    color: $white;
+                    background-color: $vermilion;
+                    box-shadow: 0 3px 0 $persian_red;
+                    border-radius: 4px;
+                    padding: 10px 44px 10px 44px;
+                    transition: $transition-base;
+                    
+                    @media screen and (max-width:$break_lg){
+                       line-height: 60px;
+                    }
+                    
+                    @media screen and (max-width:$break_xs){
+                       padding: 10px 20px 10px 20px;
+                    }
+                    
+                    &:hover {
+                        background-color: $persian_red;
+                    }
+                }
+            }
+        }
+        
+        .col {
+            @include col-3();
+            margin: 15px;
+            background: $white3;
+            box-shadow: 0 4px 0 $light-gray;
+            border-radius: 4px;
+            transition: $transition-base;
+            
+            @media screen and (max-width:$break_lg){
+               @include col-6();
+            }
+            
+            @media screen and (max-width:$break_xs){
+               @include col-12();
+            }
+            
+            .block-info {
+                display: flex;
+                @include flex-direction(column);
+                height: 100%;
+                padding: 50px 15px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                text-align: center;
+                transition: $transition-base;
+                
+                &:hover {background-color: $white;}
+                
+                &:hover .icon > .fa {color: $vermilion;}
+                
+                &:hover .button > a {
+                    background-color: $vermilion;
+                    box-shadow: 0 3px 0 $persian_red;
+                }
+                
+                .icon {
+                    .fa {
+                        font-size: 57px;
+                        color: $turquoise;
+                        margin: 0 0 12px;
+                        transition: $transition-base;
+                    }
+                }
+                
+                .title {
+                    h5 {
+                        color: $xanadu-dark;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 19px;
+                        text-transform: uppercase;
+                        margin: 0 0 26px;
+                    }
+                }
+
+                .description {
+                    p {
+                        color: $gray;
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        margin: 0 0 48px;
+                    }
+                }
+                
+                .button {
+                    margin: auto 0 -60px;
+                    
+                    a {
+                        color: $white;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 17px;
+                        text-decoration: none;
+                        letter-spacing: 0;
+                        background-color: $turquoise;
+                        box-shadow: 0 3px 0 $verdigris;
+                        border-radius: 4px;
+                        padding: 15px 65px;
+                        transition: $transition-base;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//    services end

@@ -1,0 +1,42 @@
+$font-family-base: 'Open Sans', sans-serif;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-base: $font-weight-normal;
+$font-size-base: 16px;
+$line-height: 25px;
+
+$white: #fff;
+$white2: #f3f3f3;
+$white3: #f8f8f8;
+
+$light-gray: #e5e6e6;
+$light-gray2: #ececec;
+$light-gray3: #e1e2e2;
+$gray: #777;
+
+$black: #000;
+
+$xanadu: #b0b8b9;
+$xanadu-light: #98a3a3;
+$xanadu-dark: #7f8c8c;
+$arsenic: #3f4646;
+
+$turquoise: #76c7c0;
+$verdigris: #62a29e;
+$pine_green: #528b86;
+
+$vermilion: #e8645a;
+$persian_red: #e2534b;
+
+$color: $gray;
+$bg-main-color: $white2;
+
+$transition-base: all 0.3s ease-in-out;
+
+//   MENU BUTTON
+$color: $white;
+$transition-button: $transition-base;
+$base: 10px;
+$space: $base/4;
