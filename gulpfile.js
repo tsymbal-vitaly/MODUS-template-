@@ -27,6 +27,8 @@ gulp.task('scripts', function() {
         'app/libs/jquery/dist/jquery.min.js',
         'app/libs/slick-carousel/slick/slick.js',
         'node_modules/jquery-knob/dist/jquery.knob.min.js',
+        'app/js/jquery.gallery.js',
+        'app/js/modernizr.custom.53451.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

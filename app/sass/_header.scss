@@ -1,7 +1,7 @@
 //    header start
 
 #header {
-    background-color: $turquoise;
+    background-color: $bg-header-color;
     padding: 26px 0 24px;
     position: relative;
     
@@ -91,8 +91,8 @@
                 }
                 
                 &:hover > a {
-                    background-color: $vermilion;
-                    box-shadow: 0 3px 0 $persian_red;
+                    background-color: $hover-bg-link-openmenu;
+                    box-shadow: 0 3px 0 $hover-shadow-link-openmenu;
                     
                     @media screen and (max-width: $break_sm){
                         box-shadow: none;
@@ -101,7 +101,7 @@
 
                 a {
                     display: block;
-                    color: $white;
+                    color: $color-link;
                     font-size: 13px;
                     font-weight: $font-weight-semibold;
                     line-height: 17px;
@@ -117,8 +117,8 @@
                     }
                     
                     &:hover{
-                        background-color: $verdigris;
-                        box-shadow: 0 3px 0 $pine_green;
+                        background-color: $hover-bg-link;
+                        box-shadow: 0 3px 0 $hover-shadow-link;
                         
                         @media screen and (max-width: $break_sm){
                             box-shadow: none;
@@ -128,8 +128,8 @@
             }
             
             .is-active {
-                background-color: $verdigris;
-                box-shadow: 0 3px 0 $pine_green;
+                background-color: $active-bg-link;
+                box-shadow: 0 3px 0 $active-shadow-link;
                 
                 @media screen and (max-width: $break_sm){
                     box-shadow: none;
@@ -158,7 +158,7 @@
                     top: -13px;
                     margin-left: -17px;
                     border: 7px solid transparent;
-                    border-bottom: 7px solid #e2534b;
+                    border-bottom: 7px solid $ul-before-bg-color;
                     
                     @media screen and (max-width: $break_sm){
                         content: none;
@@ -169,7 +169,7 @@
                     margin: 0;
                     padding: 2.5px 5px;
                     text-align: center;
-                    background-color: $persian_red;
+                    background-color: $bg-color-dropmenu;
                     
                     &:first-child {
                         padding-top: 5px;
@@ -183,8 +183,8 @@
                 
                 a {
                     display: block;
-                    color: $white;
-                    background-color: $vermilion;
+                    color: $color-link;
+                    background-color: $bg-link-dropmenu;
                     font-size: 13px;
                     font-weight: $font-weight-semibold;
                     line-height: 20px;
@@ -194,7 +194,7 @@
                     padding: 5px;
                     
                     &:hover{
-                        background-color: $turquoise;
+                        background-color: $hover-bg-link-dropmenu;
                     }
                     
                     .fa {

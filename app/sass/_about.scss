@@ -1,13 +1,3 @@
-$main-bg-about: $light-gray2;
-$color-caption-block-title: $persian_red;
-$color-caption-advantage: $xanadu-dark;
-$color-text-about: $gray;
-$color-arrow-rotator: $gray;
-$color-icon: $persian_red;
-$color-caption-title-skill: $xanadu-dark;
-$color-text-diagramm: $xanadu-dark;
-$color-caption-reviews: $xanadu-dark;
-
 //    about start
 
 .about {
@@ -101,6 +91,8 @@ $color-caption-reviews: $xanadu-dark;
 .dg-wrapper a.dg-center div{
 	display: block;
 }
+
+
 
 .about-info {
     @include row-flex();

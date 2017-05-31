@@ -24,6 +24,7 @@ $xanadu-dark: #7f8c8c;
 $arsenic: #3f4646;
 
 $turquoise: #76c7c0;
+$verdigris-light: #6ab3ac; 
 $verdigris: #62a29e;
 $pine_green: #528b86;
 
@@ -40,3 +41,54 @@ $color: $white;
 $transition-button: $transition-base;
 $base: 10px;
 $space: $base/4;
+
+//    HEADER
+$bg-header-color: $turquoise;
+$color-link: $white;
+$hover-bg-link: $verdigris;
+$hover-shadow-link: $pine_green;
+$hover-bg-link-openmenu: $vermilion;
+$hover-shadow-link-openmenu: $persian_red;
+$active-bg-link: $verdigris;
+$active-shadow-link: $pine_green;
+$ul-before-bg-color: $persian_red;
+$bg-color-dropmenu: $persian_red;
+$bg-link-dropmenu: $vermilion;
+$hover-bg-link-dropmenu: $turquoise;
+
+//    VISION
+$slick-arrow-color: $white;
+$slick-arrow-bg: $vermilion;
+$slick-arrow-shadow: $persian_red;
+$hover-slick-arrow-bg: $vermilion;
+$hover-slick-arrow-shadow: $persian_red;
+$slick-dots-bg: $xanadu;
+$active-dots-bg: $persian_red;
+
+//    SERVICES
+
+
+//    ABOUT
+$main-bg-about: $light-gray2;
+$color-caption-block-title: $persian_red;
+$color-caption-advantage: $xanadu-dark;
+$color-text-about: $gray;
+$color-arrow-rotator: $gray;
+$color-icon: $persian_red;
+$color-caption-title-skill: $xanadu-dark;
+$color-text-diagramm: $xanadu-dark;
+$color-caption-reviews: $xanadu-dark;
+
+//    CLIENTS
+$gb-line: $light-gray3;
+$bg-arrow: $xanadu-light;
+$shadow-arrow: $xanadu-dark;
+$hover-bg-arrow: $vermilion;
+$hover-shadow-arrow: $persian_red;
+$color-text-clients: $xanadu-dark;
+
+//    ELEMENTS
+$bg-elements: $turquoise;
+
+//    FOOTER
+$bg-footer: $verdigris-light;

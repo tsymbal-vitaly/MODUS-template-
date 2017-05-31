@@ -92,9 +92,9 @@
             transform: translate(0, -50%);
             cursor: pointer;
             font-size: 42px;
-            color: $white;
-            background-color: rgba($vermilion, 0.8);
-            box-shadow: 0 3px 0 rgba($persian_red, 0.8);
+            color: $slick-arrow-color;
+            background-color: rgba($slick-arrow-bg, 0.8);
+            box-shadow: 0 3px 0 rgba($slick-arrow-shadow, 0.8);
             transition: $transition-base;
             z-index: 20;
             
@@ -103,8 +103,8 @@
             }
             
             &:hover {
-                background-color: rgba($vermilion, 1);
-                box-shadow: 0 3px 0 rgba($persian_red, 1);
+                background-color: rgba($hover-slick-arrow-bg, 1);
+                box-shadow: 0 3px 0 rgba($hover-slick-arrow-shadow, 1);
             }
         }
         
@@ -132,7 +132,7 @@
                     width: 60px;
                     cursor: pointer;
                     padding: 0;
-                    background-color: $xanadu;
+                    background-color: $slick-dots-bg;
 
                     &:before {content: none;}
                 }
